@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lateral Operations | Global Bilingual Talent and Sales Operations</title>
+  <meta name="description" content="Lateral Operations helps US businesses hire, train, and manage reliable global bilingual remote talent through recruiting, onboarding, KPI tracking, and remote team support.">
+  <meta name="codex-deploy-version" content="global-logo-2026-06-30-v5-quality">
+  <link rel="icon" href="assets/lateral-operations-logo.png" type="image/png">
+  <style>
+    :root {
+      --ink: #101316;
+      --paper: #f7f4ee;
+      --panel: #ffffff;
+      --line: #d8d2c7;
+      --muted: #5f6668;
+      --gold: #b98b39;
+      --teal: #196f73;
+      --blue: #234e70;
+      --dark: #111a1d;
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .nav {
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 18px clamp(18px, 5vw, 64px);
+      color: #fff;
+      background: linear-gradient(180deg, rgba(10, 14, 16, .72), rgba(10, 14, 16, 0));
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255, 255, 255, .32);
+      border-radius: 7px;
+      object-fit: contain;
+      background: #050505;
+      padding: 3px;
+      display: block;
+      flex: 0 0 auto;
+    }
+
+    .brand-name {
+      display: inline-block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    .nav-cta,
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .nav-cta {
+      background: #fff;
+      color: var(--ink);
+    }
+
+    .hero {
+      min-height: 92vh;
+      display: grid;
+      align-items: end;
+      position: relative;
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(12, 15, 17, .94) 0%, rgba(12, 15, 17, .72) 38%, rgba(12, 15, 17, .25) 72%),
+        url("assets/lateral-operations-hero.png") center / cover no-repeat;
+      padding: 112px clamp(20px, 5vw, 72px) 48px;
+    }
+
+    .hero-inner {
+      width: min(720px, 100%);
+    }
+
+    .eyebrow {
+      color: #e8c77d;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      margin-bottom: 16px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: clamp(42px, 8vw, 78px);
+      line-height: .98;
+      letter-spacing: 0;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: rgba(255, 255, 255, .84);
+      font-size: clamp(18px, 2.2vw, 22px);
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .button.primary {
+      background: var(--gold);
+      color: #101010;
+    }
+
+    .button.secondary {
+      border-color: rgba(255, 255, 255, .36);
+      color: #fff;
+      background: rgba(255, 255, 255, .08);
+    }
+
+    .proof-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .proof {
+      background: var(--paper);
+      padding: 24px clamp(18px, 3vw, 34px);
+    }
+
+    .proof strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    .proof span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    section {
+      padding: 74px clamp(20px, 5vw, 72px);
+    }
+
+    .section-inner {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      gap: clamp(34px, 7vw, 82px);
+      align-items: start;
+    }
+
+    h2 {
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.05;
+      letter-spacing: 0;
+      margin-bottom: 18px;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 720px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .service,
+    .quality-card,
+    .scorecard,
+    .package,
+    .process-step {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+
+    .service h3,
+    .quality-card h3,
+    .scorecard h3,
+    .package h3,
+    .process-step h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .service p,
+    .quality-card p,
+    .scorecard p,
+    .package p,
+    .process-step p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .quality {
+      background: #ffffff;
+    }
+
+    .quality-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .quality-stack {
+      display: grid;
+      gap: 14px;
+    }
+
+    .scorecard-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .scorecard-item,
+    .role-light {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      background: #fdfbf7;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .roles-supported {
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      background: var(--paper);
+    }
+
+    .roles-supported h3 {
+      font-size: 18px;
+      margin-bottom: 14px;
+    }
+
+    .roles-light {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .band {
+      background: var(--dark);
+      color: #fff;
+    }
+
+    .band .lead,
+    .band p {
+      color: rgba(255, 255, 255, .76);
+    }
+
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .packages.single {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .package {
+      background: rgba(255, 255, 255, .06);
+      border-color: rgba(255, 255, 255, .16);
+    }
+
+    .model-block {
+      margin-top: 42px;
+    }
+
+    .model-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: end;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, .18);
+    }
+
+    .model-header h3 {
+      font-size: clamp(24px, 3vw, 34px);
+      margin-bottom: 8px;
+    }
+
+    .model-header p {
+      max-width: 760px;
+      margin-bottom: 0;
+    }
+
+    .package-label {
+      color: #e8c77d;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .package.best-fit {
+      border-color: rgba(232, 199, 125, .52);
+      background: rgba(255, 255, 255, .09);
+    }
+
+    .package.wide {
+      max-width: 820px;
+    }
+
+    .package.wide.full {
+      max-width: none;
+    }
+
+    .price {
+      color: #e8c77d;
+      font-weight: 800;
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .package .fit {
+      color: rgba(255, 255, 255, .72);
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .roles {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .role {
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      background: rgba(255, 255, 255, .05);
+      color: rgba(255, 255, 255, .86);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .model-note {
+      margin-top: 18px;
+      color: rgba(255, 255, 255, .68);
+      font-size: 14px;
+    }
+
+    .engagement-cta {
+      margin-top: 42px;
+      padding: 30px;
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .engagement-cta h3 {
+      font-size: 26px;
+      margin-bottom: 6px;
+    }
+
+    .engagement-cta p {
+      margin-bottom: 0;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, .82);
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .step-number {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #e8d7b0;
+      color: var(--dark);
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .cta {
+      background: var(--blue);
+      color: #fff;
+      text-align: center;
+    }
+
+    .cta .section-inner {
+      width: min(820px, 100%);
+    }
+
+    .cta p {
+      color: rgba(255, 255, 255, .8);
+      font-size: 18px;
+    }
+
+    .cta .button {
+      margin-top: 16px;
+      background: #fff;
+      color: var(--ink);
+    }
+
+    .contact {
+      background: #ffffff;
+    }
+
+    .contact-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: clamp(24px, 5vw, 52px);
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: clamp(24px, 5vw, 42px);
+      background: #fdfbf7;
+    }
+
+    .contact-panel p {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 720px;
+    }
+
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: var(--radius);
+      background: var(--dark);
+      color: #fff;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .contact-note {
+      display: block;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 28px clamp(20px, 5vw, 72px);
+      background: #0d1113;
+      color: rgba(255, 255, 255, .68);
+      font-size: 14px;
+    }
+
+    footer .section-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .footer-logo {
+      width: 34px;
+      height: 34px;
+      border-radius: 6px;
+      object-fit: contain;
+      background: #050505;
+      padding: 2px;
+    }
+
+    @media (max-width: 820px) {
+      .nav {
+        position: absolute;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 88vh;
+        background:
+          linear-gradient(180deg, rgba(12, 15, 17, .9) 0%, rgba(12, 15, 17, .72) 52%, rgba(12, 15, 17, .45) 100%),
+          url("assets/lateral-operations-hero.png") center / cover no-repeat;
+      }
+
+      .proof-strip,
+      .split,
+      .quality-grid,
+      .scorecard-list,
+      .roles-light,
+      .packages,
+      .process,
+      .contact-panel,
+      .roles {
+        grid-template-columns: 1fr;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .model-header,
+      .engagement-cta {
+        display: block;
+      }
+
+      .engagement-cta .button {
+        margin-top: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#">
+      <img class="brand-logo" src="assets/lateral-operations-logo.png" alt="Lateral Operations logo">
+      <span class="brand-name">Lateral Operations</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#engagement">How We Work</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+      <!-- TODO booking placeholder: replace this mailto with the final Calendly, Cal.com, or CRM booking link. -->
+      <a class="nav-cta" href="mailto:alberto@lateraloperations.com?subject=Lateral%20Operations%20Call">Book a Call</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="eyebrow">Global bilingual remote talent + operations support</div>
+        <h1>Build the remote team your business can actually depend on.</h1>
+        <p>Lateral Operations helps US businesses hire, train, and manage reliable global bilingual remote talent through recruiting, sales operations, onboarding, KPI tracking, and remote team support.</p>
+        <div class="hero-actions">
+          <!-- TODO booking placeholder: replace this mailto with the final booking page URL when ready. -->
+          <a class="button primary" href="mailto:alberto@lateraloperations.com?subject=Lateral%20Operations%20Call">Book a Call</a>
+          <a class="button secondary" href="#engagement">See how we work</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="proof-strip" aria-label="Core strengths">
+      <div class="proof">
+        <strong>Global Talent</strong>
+        <span>Bilingual remote talent for US-facing roles.</span>
+      </div>
+      <div class="proof">
+        <strong>Sales Discipline</strong>
+        <span>Scripts, follow-up structure, and sales operations.</span>
+      </div>
+      <div class="proof">
+        <strong>Operational Control</strong>
+        <span>Onboarding, SOPs, CRM workflows, and clear handoffs.</span>
+      </div>
+      <div class="proof">
+        <strong>Accountability</strong>
+        <span>KPI tracking, dashboards, and weekly reporting.</span>
+      </div>
+    </div>
+
+    <section id="services">
+      <div class="section-inner split">
+        <div>
+          <h2>Premium remote hiring with operational structure.</h2>
+          <p class="lead">Hiring global bilingual remote talent works best when recruiting, onboarding, training, KPI tracking, and team management are connected. Lateral Operations helps US businesses build bilingual remote teams worldwide with a clear operating rhythm from day one.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service">
+            <h3>Candidate Sourcing</h3>
+            <p>Find global bilingual remote talent for sales, support, intake, admin, recruiting, and operations roles.</p>
+          </article>
+          <article class="service">
+            <h3>Screening + Shortlists</h3>
+            <p>Use scorecards, interviews, communication review, availability checks, and role-specific filters before candidates reach your calendar.</p>
+          </article>
+          <article class="service">
+            <h3>Sales + Support Setup</h3>
+            <p>Build scripts, follow-up rules, CRM stages, onboarding checklists, and daily expectations for new hires.</p>
+          </article>
+          <article class="service">
+            <h3>KPI Management</h3>
+            <p>Track activity, conversion, attendance, response times, and weekly performance signals with simple dashboards.</p>
+          </article>
+          <article class="service">
+            <h3>AI-Ready Workflows</h3>
+            <p>Prepare bilingual remote talent for modern work across CRMs, Google Workspace, communication tools, and AI-assisted workflows.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="quality" class="quality">
+      <div class="section-inner">
+        <h2>Quality before volume.</h2>
+        <p class="lead">We do not just send resumes. We help define the role, screen for communication, verify remote readiness, prepare candidates, and support teams with structure and accountability.</p>
+        <div class="quality-grid">
+          <div class="quality-stack">
+            <article class="quality-card">
+              <h3>AI-Ready Bilingual Talent</h3>
+              <p>Lateral Operations helps US businesses hire bilingual remote talent prepared for modern remote work, including CRM usage, Google Workspace, communication tools, and AI-assisted workflows.</p>
+            </article>
+            <article class="quality-card">
+              <h3>Founder-Led Hiring</h3>
+              <p>Every engagement is hands-on and founder-led, with a focus on quality, accountability, and trust instead of high-volume resume forwarding.</p>
+            </article>
+          </div>
+          <article class="scorecard">
+            <h3>Lateral Talent Scorecard</h3>
+            <p>Candidates are reviewed against the practical signals that matter for global bilingual remote teams.</p>
+            <div class="scorecard-list" aria-label="Lateral Talent Scorecard criteria">
+              <span class="scorecard-item">English communication</span>
+              <span class="scorecard-item">Role experience</span>
+              <span class="scorecard-item">Remote readiness</span>
+              <span class="scorecard-item">Reliability</span>
+              <span class="scorecard-item">Tool familiarity</span>
+              <span class="scorecard-item">Coachability</span>
+              <span class="scorecard-item">Schedule fit</span>
+            </div>
+          </article>
+        </div>
+        <div class="roles-supported">
+          <h3>Roles We Support</h3>
+          <div class="roles-light" aria-label="Roles Lateral Operations supports">
+            <span class="role-light">Sales Representatives</span>
+            <span class="role-light">Appointment Setters</span>
+            <span class="role-light">Customer Support Agents</span>
+            <span class="role-light">Intake Specialists</span>
+            <span class="role-light">Recruiting Assistants</span>
+            <span class="role-light">Virtual Assistants</span>
+            <span class="role-light">Operations Coordinators</span>
+            <span class="role-light">Team Leads</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="engagement" class="band">
+      <div class="section-inner">
+        <h2>How We Work</h2>
+        <p class="lead">Choose the level of support that fits your hiring stage. Every model is designed to protect your time, improve candidate quality, and help bilingual remote teams operate with structure.</p>
+
+        <div class="model-block">
+          <div class="model-header">
+            <div>
+              <h3>Recruiting Projects</h3>
+              <p>For companies that need qualified bilingual candidates without wasting time sourcing and screening.</p>
+            </div>
+          </div>
+          <div class="packages">
+            <article class="package">
+              <div class="package-label">Recruiting Project</div>
+              <h3>Talent Scout</h3>
+              <div class="price">Starting at $375</div>
+              <p class="fit">Best for companies exploring the market or hiring one entry-level remote role.</p>
+              <ul>
+                <li>Discovery call</li>
+                <li>Basic role definition</li>
+                <li>Candidate scorecard</li>
+                <li>Initial bilingual talent search</li>
+                <li>Candidate tracker</li>
+                <li>8-12 potential candidates</li>
+                <li>Basic screening for English, experience, availability, and remote readiness</li>
+                <li>Final recommendation report</li>
+              </ul>
+            </article>
+            <article class="package best-fit">
+              <div class="package-label">Recruiting Project</div>
+              <h3>Talent Sprint</h3>
+              <div class="price">Starting at $750</div>
+              <p class="fit">Best for companies hiring one specific role quickly.</p>
+              <ul>
+                <li>Intake call</li>
+                <li>Improved job description</li>
+                <li>Candidate scorecard</li>
+                <li>Active sourcing</li>
+                <li>Initial screening</li>
+                <li>English and communication review</li>
+                <li>Availability and rate review</li>
+                <li>Shortlist of 4-6 qualified candidates</li>
+                <li>Candidate tracker</li>
+                <li>Basic interview coordination</li>
+              </ul>
+            </article>
+            <article class="package">
+              <div class="package-label">Recruiting Project</div>
+              <h3>Growth Hiring Support</h3>
+              <div class="price">Starting at $1,250</div>
+              <p class="fit">Best for companies that need deeper hiring support or 1-2 active roles.</p>
+              <ul>
+                <li>Everything in Talent Sprint</li>
+                <li>30 days of sourcing support</li>
+                <li>Initial interviews by Lateral Operations</li>
+                <li>Weekly shortlist updates</li>
+                <li>Candidate pipeline management</li>
+                <li>Interview coordination</li>
+                <li>Basic onboarding checklist</li>
+                <li>Offer support</li>
+                <li>Weekly hiring report</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <div class="model-block">
+          <div class="model-header">
+            <div>
+              <h3>Monthly Operations Support</h3>
+              <p>For companies building or improving a bilingual remote team and needing ongoing recruiting, onboarding, KPI tracking, coaching, and process support.</p>
+            </div>
+          </div>
+          <div class="packages single">
+            <article class="package wide best-fit">
+              <div class="package-label">Monthly Support</div>
+              <h3>Monthly Operator</h3>
+              <div class="price">Starting at $2,500/month</div>
+              <p class="fit">Best for companies building or improving a bilingual remote team.</p>
+              <ul>
+                <li>Ongoing recruiting support</li>
+                <li>Candidate screening and interviews</li>
+                <li>Candidate tracker</li>
+                <li>Onboarding checklist</li>
+                <li>Basic sales or support scripts</li>
+                <li>KPI setup</li>
+                <li>Weekly performance dashboard</li>
+                <li>Weekly operations call</li>
+                <li>Coaching support</li>
+                <li>Remote team structure</li>
+                <li>Replacement support</li>
+                <li>Process documentation</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <div class="model-block">
+          <div class="model-header">
+            <div>
+              <h3>Managed Talent</h3>
+              <p>For companies that want Lateral Operations to provide pre-screened bilingual remote talent with ongoing support.</p>
+            </div>
+          </div>
+          <div class="packages single">
+            <article class="package wide full best-fit">
+              <div class="package-label">Managed Talent</div>
+              <h3>Managed Bilingual Talent</h3>
+              <div class="price">Starting at $8/hour</div>
+              <p>For companies that need more than a shortlist, Lateral Operations can provide managed bilingual remote talent on an hourly basis. We handle sourcing, screening, onboarding support, communication structure, replacement support, and operational guidance so clients can focus on results.</p>
+              <div class="roles" aria-label="Available roles">
+                <span class="role">Sales Representatives</span>
+                <span class="role">Appointment Setters</span>
+                <span class="role">Customer Support Agents</span>
+                <span class="role">Intake Specialists</span>
+                <span class="role">Recruiting Assistants</span>
+                <span class="role">Virtual Assistants</span>
+                <span class="role">Team Leads</span>
+                <span class="role">Operations Coordinators</span>
+              </div>
+              <p class="model-note">Replacement support available for managed placements based on the engagement terms.</p>
+              <p class="model-note">Final hourly rate depends on the role, schedule, experience level, language requirements, and level of operational support.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="engagement-cta">
+          <div>
+            <h3>Not sure which model fits your team?</h3>
+            <p>Start with a short conversation and we will map the cleanest path for your hiring or remote team support needs.</p>
+          </div>
+          <!-- TODO booking placeholder: replace this mailto with the final Calendly, Cal.com, or CRM booking link. -->
+          <a class="button primary" href="mailto:alberto@lateraloperations.com?subject=Lateral%20Operations%20Call">Book a Call</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="section-inner">
+        <h2>A simple operating rhythm for remote teams.</h2>
+        <p class="lead">Every engagement connects recruiting, onboarding, KPI tracking, and remote team support so the people you hire know what to do, how to report, and what good performance looks like.</p>
+        <div class="process">
+          <article class="process-step">
+            <span class="step-number">1</span>
+            <h3>Define</h3>
+            <p>Clarify the role, scorecard, schedule, tools, language requirements, and must-have skills.</p>
+          </article>
+          <article class="process-step">
+            <span class="step-number">2</span>
+            <h3>Source</h3>
+            <p>Build a focused pipeline of global bilingual remote talent matched to the role and market.</p>
+          </article>
+          <article class="process-step">
+            <span class="step-number">3</span>
+            <h3>Screen</h3>
+            <p>Filter candidates for communication, judgment, role fit, reliability, availability, and remote readiness.</p>
+          </article>
+          <article class="process-step">
+            <span class="step-number">4</span>
+            <h3>Operate</h3>
+            <p>Set expectations, scripts, onboarding, KPIs, reporting, and coaching so execution does not drift.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="section-inner">
+        <div class="contact-panel">
+          <div>
+            <h2>Contact Alberto directly.</h2>
+            <p>For recruiting projects, managed bilingual talent, sales operations, onboarding, KPI tracking, or remote team support, email Alberto and include the role, schedule, language requirements, and target start date.</p>
+            <span class="contact-note">Main contact for Lateral Operations</span>
+          </div>
+          <!-- TODO contact form placeholder: replace this mailto with a real form endpoint or booking link when one is connected. -->
+          <a class="contact-email" href="mailto:alberto@lateraloperations.com?subject=Lateral%20Operations%20Inquiry">alberto@lateraloperations.com</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="booking" class="cta">
+      <div class="section-inner">
+        <h2>Need reliable global bilingual remote talent?</h2>
+        <p>Start with a recruiting project, monthly operations support, or managed bilingual talent model built around your team structure, timeline, and performance expectations.</p>
+        <!-- TODO booking placeholder: replace this mailto with the final booking page URL when ready. -->
+        <a class="button" href="mailto:alberto@lateraloperations.com?subject=Lateral%20Operations%20Call">Book a Call</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="section-inner">
+      <span class="footer-brand">
+        <img class="footer-logo" src="assets/lateral-operations-logo.png" alt="" aria-hidden="true">
+        <span>Lateral Operations</span>
+      </span>
+      <a href="mailto:alberto@lateraloperations.com?subject=Lateral%20Operations%20Inquiry">alberto@lateraloperations.com</a>
+      <!-- TODO LinkedIn placeholder: confirm this is the final public company URL after the page is published. -->
+      <a href="https://www.linkedin.com/company/lateral-operations/" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+</body>
+</html>
