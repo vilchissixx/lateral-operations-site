@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lateral Operations Blog</title>
+    <link>https://www.lateraloperations.com/blog/</link>
+    <description>Practical notes on international hiring, remote operations, customer success, sales support, and founder-led hiring systems.</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Jul 2026 12:00:00 GMT</lastBuildDate>
+    <atom:link href="https://www.lateraloperations.com/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why Hiring International Talent Is an Operations Decision</title>
+      <link>https://www.lateraloperations.com/blog/why-hiring-international-talent-is-an-operations-decision/</link>
+      <guid>https://www.lateraloperations.com/blog/why-hiring-international-talent-is-an-operations-decision/</guid>
+      <pubDate>Thu, 23 Jul 2026 12:00:00 GMT</pubDate>
+      <category>International Hiring</category>
+      <description>International hiring works best when role clarity, communication rhythm, tools, and handoffs are designed before sourcing starts.</description>
+    </item>
+    <item>
+      <title>What a $750 Talent Sprint Actually Covers</title>
+      <link>https://www.lateraloperations.com/blog/what-a-750-talent-sprint-actually-covers/</link>
+      <guid>https://www.lateraloperations.com/blog/what-a-750-talent-sprint-actually-covers/</guid>
+      <pubDate>Thu, 23 Jul 2026 12:00:00 GMT</pubDate>
+      <category>Founder Operations</category>
+      <description>A $750 Talent Sprint covers role intake, scorecard creation, focused sourcing, practical screening, and a concise shortlist for one remote role.</description>
+    </item>
+    <item>
+      <title>The Real Cost of Leaving a Critical Role Open</title>
+      <link>https://www.lateraloperations.com/blog/the-real-cost-of-leaving-a-critical-role-open/</link>
+      <guid>https://www.lateraloperations.com/blog/the-real-cost-of-leaving-a-critical-role-open/</guid>
+      <pubDate>Thu, 23 Jul 2026 12:00:00 GMT</pubDate>
+      <category>Remote Operations</category>
+      <description>An open role creates operational drag through delayed responses, manager overload, missed follow-through, and quality problems.</description>
+    </item>
+  </channel>
+</rss>
