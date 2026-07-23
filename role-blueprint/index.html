@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free Role Blueprint | Lateral Operations</title>
+  <meta name="description" content="Turn a vague job description into a clearer hiring scorecard, screening plan, interview guide, and 30/60/90-day success profile.">
+  <link rel="canonical" href="https://www.lateraloperations.com/role-blueprint/">
+  <meta property="og:title" content="Free Role Blueprint | Lateral Operations">
+  <meta property="og:description" content="Turn a vague job description into a clearer hiring scorecard, screening plan, interview guide, and 30/60/90-day success profile.">
+  <meta property="og:url" content="https://www.lateraloperations.com/role-blueprint/">
+  <meta property="og:image" content="https://www.lateraloperations.com/assets/lateral-operations-hero.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Role Blueprint | Lateral Operations">
+  <meta name="twitter:description" content="Turn a vague job description into a clearer hiring scorecard, screening plan, interview guide, and 30/60/90-day success profile.">
+  <meta name="twitter:image" content="https://www.lateraloperations.com/assets/lateral-operations-hero.png">
+  <link rel="icon" href="../assets/lateral-operations-logo.png" type="image/png">
+  <link rel="alternate" type="application/rss+xml" title="Lateral Operations Blog" href="https://www.lateraloperations.com/rss.xml">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="../">
+      <img class="brand-logo" src="../assets/lateral-operations-logo.png" alt="Lateral Operations logo">
+      <span class="brand-name">Lateral Operations</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="../blog/">Blog</a>
+      <a href="../newsletter/">Newsletter</a>
+      <a href="../#included">Talent Sprint</a>
+      <a href="../role-blueprint/">Free Role Blueprint</a>
+      <a class="nav-cta" href="https://calendar.app.google/tW24dFbjDKWzCcVLA" target="_blank" rel="noopener">Start a Talent Sprint</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero role-blueprint-hero">
+      <div class="section-inner page-hero-narrow">
+        <div class="section-kicker">Free Role Blueprint</div>
+        <h1>Turn a fuzzy role into a clearer hiring plan.</h1>
+        <p class="lead">Build a practical scorecard, screening plan, interview guide, and 30/60/90-day success profile before you start reviewing resumes.</p>
+        <div class="cta-actions">
+          <a class="button primary" href="#blueprint-tool">Build My Free Role Blueprint</a>
+          <a class="button secondary" href="https://calendar.app.google/tW24dFbjDKWzCcVLA" target="_blank" rel="noopener">Start a $750 Talent Sprint</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="blueprint-tool" class="blueprint-shell" aria-labelledby="blueprint-heading">
+      <div class="section-inner">
+        <div class="blueprint-intro">
+          <div>
+            <div class="section-kicker">Role intake tool</div>
+            <h2 id="blueprint-heading" tabindex="-1">Free Role Blueprint</h2>
+            <p class="lead">This version uses a deterministic diagnosis. It is meant to help clarify hiring operations, not predict outcomes or replace legal, compensation, or compliance advice.</p>
+          </div>
+          <ol class="step-progress" aria-label="Role Blueprint progress">
+            <li data-step-indicator="role">Role</li>
+            <li data-step-indicator="diagnosis">Diagnosis</li>
+            <li data-step-indicator="lead">Send</li>
+            <li data-step-indicator="report">Report</li>
+          </ol>
+        </div>
+
+        <form class="blueprint-form" data-role-blueprint-form novalidate>
+          <input type="text" name="website" tabindex="-1" autocomplete="off" class="form-hp" aria-hidden="true">
+          <input type="hidden" name="formStartedAt">
+          <input type="hidden" name="consentTimestamp">
+
+          <section class="blueprint-step" data-blueprint-step="role" aria-labelledby="role-step-heading">
+            <h2 id="role-step-heading" tabindex="-1">Step 1 - Role information</h2>
+            <div class="form-grid two-columns">
+              <div class="form-row">
+                <label for="job-title">Job title</label>
+                <input id="job-title" name="jobTitle" type="text" maxlength="140" required>
+              </div>
+              <div class="form-row">
+                <label for="employment-type">Employment type</label>
+                <input id="employment-type" name="employmentType" type="text" maxlength="300" placeholder="Full-time contractor, employee, part-time, project-based" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="job-description">Full job description</label>
+              <p class="field-warning">Do not submit confidential, legally privileged, or sensitive personal information.</p>
+              <textarea id="job-description" name="jobDescription" rows="9" maxlength="12000" required></textarea>
+            </div>
+
+            <div class="form-row">
+              <label for="business-objective">Primary business objective of the role</label>
+              <textarea id="business-objective" name="businessObjective" rows="3" maxlength="1200" required></textarea>
+            </div>
+
+            <div class="form-grid two-columns">
+              <div class="form-row">
+                <label for="responsibilities">Main responsibilities</label>
+                <textarea id="responsibilities" name="responsibilities" rows="6" maxlength="3000" required></textarea>
+              </div>
+              <div class="form-row">
+                <label for="required-experience">Required experience</label>
+                <textarea id="required-experience" name="requiredExperience" rows="6" maxlength="2500" required></textarea>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="tools-knowledge">Required tools or industry knowledge <span>optional but useful</span></label>
+              <textarea id="tools-knowledge" name="toolsKnowledge" rows="4" maxlength="1600"></textarea>
+            </div>
+
+            <div class="form-grid two-columns">
+              <div class="form-row">
+                <label for="work-schedule">Work schedule</label>
+                <input id="work-schedule" name="workSchedule" type="text" maxlength="600" required>
+              </div>
+              <div class="form-row">
+                <label for="timezone-overlap">Required time-zone overlap</label>
+                <input id="timezone-overlap" name="timezoneOverlap" type="text" maxlength="600" required>
+              </div>
+              <div class="form-row">
+                <label for="candidate-regions">Countries or regions where candidates may be based</label>
+                <input id="candidate-regions" name="candidateRegions" type="text" maxlength="800" required>
+              </div>
+              <div class="form-row">
+                <label for="compensation-budget">Approximate compensation budget</label>
+                <input id="compensation-budget" name="compensationBudget" type="text" maxlength="400" required>
+              </div>
+              <div class="form-row">
+                <label for="ideal-start-date">Ideal start date</label>
+                <input id="ideal-start-date" name="idealStartDate" type="text" maxlength="300" required>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="button primary" type="button" data-next-step="diagnosis">Show Preliminary Diagnosis</button>
+            </div>
+          </section>
+
+          <section class="blueprint-step" data-blueprint-step="diagnosis" aria-labelledby="diagnosis-step-heading" hidden>
+            <h2 id="diagnosis-step-heading" tabindex="-1">Step 2 - Free preliminary diagnosis</h2>
+            <p class="lead">The score is a practical clarity estimate based on completeness, focus, conflicts, and hiring friction. It is not scientific, predictive, guaranteed, or legal guidance.</p>
+            <div class="diagnosis-panel" data-diagnosis-panel></div>
+            <div class="form-actions">
+              <button class="button secondary dark" type="button" data-next-step="role">Edit Role Details</button>
+              <button class="button primary" type="button" data-next-step="lead">Receive the Full Role Blueprint</button>
+            </div>
+          </section>
+
+          <section class="blueprint-step" data-blueprint-step="lead" aria-labelledby="lead-step-heading" hidden>
+            <h2 id="lead-step-heading" tabindex="-1">Step 3 - Send the full Role Blueprint</h2>
+            <p class="lead">The report remains visible in this browser even if storage or email delivery is temporarily unavailable.</p>
+
+            <div class="form-grid two-columns">
+              <div class="form-row">
+                <label for="first-name">First name</label>
+                <input id="first-name" name="firstName" type="text" autocomplete="given-name" maxlength="80" required>
+              </div>
+              <div class="form-row">
+                <label for="business-email">Business email</label>
+                <input id="business-email" name="businessEmail" type="email" autocomplete="email" maxlength="160" required>
+              </div>
+              <div class="form-row">
+                <label for="company-name">Company name</label>
+                <input id="company-name" name="companyName" type="text" autocomplete="organization" maxlength="140" required>
+              </div>
+              <div class="form-row">
+                <label for="company-website">Company website <span>optional</span></label>
+                <input id="company-website" name="companyWebsite" type="url" autocomplete="url" maxlength="220">
+              </div>
+              <div class="form-row">
+                <label for="phone">Phone number <span>optional</span></label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="60">
+              </div>
+            </div>
+
+            <label class="consent-row">
+              <input name="leadConsent" type="checkbox" required>
+              <span>I consent to receive the requested Role Blueprint by email and related follow-up from Lateral Operations about this specific hiring need. Lateral Operations may call only if I voluntarily provide a phone number.</span>
+            </label>
+
+            <label class="consent-row">
+              <input name="newsletterConsent" type="checkbox">
+              <span>Optional: also subscribe me to the Lateral Operations newsletter. This is separate from the Role Blueprint and is unchecked by default.</span>
+            </label>
+
+            <div class="form-actions">
+              <button class="button secondary dark" type="button" data-next-step="diagnosis">Back to Diagnosis</button>
+              <button class="button primary" type="submit" data-submit-blueprint>Generate Full Role Blueprint</button>
+            </div>
+          </section>
+
+          <section class="blueprint-step report-step" data-blueprint-step="report" aria-labelledby="report-step-heading" hidden>
+            <div class="report-topline">
+              <div>
+                <h2 id="report-step-heading" tabindex="-1">Step 4 - Full Role Blueprint</h2>
+                <p class="lead">Keep this page open until you have saved or copied the report.</p>
+              </div>
+              <div class="report-actions">
+                <button class="button secondary dark" type="button" data-print-report>Print / Save as PDF</button>
+                <button class="button secondary dark" type="button" data-copy-report>Copy Report</button>
+              </div>
+            </div>
+            <ul class="delivery-status" data-delivery-status aria-label="Delivery status"></ul>
+            <p class="form-message" data-newsletter-status role="status" aria-live="polite"></p>
+            <article class="blueprint-report" data-report-panel></article>
+          </section>
+
+          <p class="form-message" data-blueprint-message role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="section-inner">
+      <span class="footer-brand">
+        <img class="footer-logo" src="../assets/lateral-operations-logo.png" alt="" aria-hidden="true">
+        <span>Lateral Operations</span>
+      </span>
+      <div class="footer-links">
+        <a href="mailto:alberto@lateraloperations.com?subject=Talent%20Sprint%20Inquiry">alberto@lateraloperations.com</a>
+        <a href="tel:+13323014550">+1 (332) 301-4550</a>
+        <a href="../blog/">Blog</a>
+        <a href="../newsletter/">Newsletter</a>
+        <a href="../privacy/">Privacy</a>
+        <a href="https://www.linkedin.com/company/lateral-operations/" target="_blank" rel="noopener">LinkedIn</a>
+        <span>&copy; 2026 Lateral Operations</span>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/role-blueprint.js" defer></script>
+</body>
+</html>

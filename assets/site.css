@@ -40,11 +40,15 @@ a:focus-visible {
 }
 
 button,
-input {
+input,
+select,
+textarea {
   font: inherit;
 }
 
-input {
+input,
+select,
+textarea {
   width: 100%;
   min-height: 44px;
   border: 1px solid var(--line);
@@ -55,10 +59,16 @@ input {
 }
 
 input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
 button:focus-visible,
 a:focus-visible {
   outline: 3px solid rgba(232, 199, 125, .78);
   outline-offset: 3px;
+}
+
+textarea {
+  resize: vertical;
 }
 
 .nav {
@@ -130,6 +140,12 @@ a:focus-visible {
   border-color: rgba(255, 255, 255, .36);
   color: #fff;
   background: rgba(255, 255, 255, .08);
+}
+
+.button.secondary.dark {
+  border-color: rgba(17, 26, 29, .28);
+  color: var(--ink);
+  background: #fff;
 }
 
 .button:disabled,
@@ -442,6 +458,185 @@ h3 {
   gap: 18px;
 }
 
+.role-blueprint-hero .cta-actions {
+  margin-top: 28px;
+}
+
+.blueprint-shell {
+  background: #f7f4ee;
+}
+
+.blueprint-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 28px;
+}
+
+.step-progress {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-width: min(520px, 100%);
+}
+
+.step-progress li {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  background: #fff;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.step-progress li.is-active {
+  border-color: rgba(185, 139, 57, .7);
+  background: #fdf7e9;
+  color: var(--ink);
+}
+
+.blueprint-form,
+.blueprint-step {
+  display: grid;
+  gap: 18px;
+}
+
+.blueprint-step {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(20px, 4vw, 34px);
+  background: #fff;
+}
+
+.blueprint-step[hidden] {
+  display: none;
+}
+
+.form-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.two-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.field-warning {
+  margin: 0 0 6px;
+  color: #8b1e1e;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-actions,
+.report-actions,
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.diagnosis-panel,
+.blueprint-report {
+  display: grid;
+  gap: 16px;
+}
+
+.score-meter {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 20px;
+  border: 1px solid rgba(185, 139, 57, .5);
+  border-radius: var(--radius);
+  background: #fdf7e9;
+}
+
+.score-number {
+  color: var(--ink);
+  font-size: clamp(48px, 9vw, 76px);
+  font-weight: 900;
+  line-height: .9;
+}
+
+.score-label,
+.score-explanation {
+  color: var(--muted);
+}
+
+.diagnosis-block,
+.report-section,
+.report-cta {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  background: #fdfbf7;
+}
+
+.diagnosis-block ul,
+.report-section ul {
+  margin: 0;
+  padding-left: 21px;
+}
+
+.diagnosis-block li,
+.report-section li {
+  margin: 7px 0;
+}
+
+.report-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.delivery-status {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.delivery-status li {
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  font-weight: 700;
+}
+
+.status-ok {
+  background: #e8f5ed;
+  color: #0f6a3b;
+}
+
+.status-warn {
+  background: #fff0dd;
+  color: #7c4300;
+}
+
+.status-note {
+  background: #eef3f4;
+  color: #334044;
+}
+
+.report-cta {
+  background: #111a1d;
+  color: #fff;
+}
+
+.report-cta p {
+  color: rgba(255, 255, 255, .76);
+}
+
 footer {
   padding: 28px clamp(20px, 5vw, 72px);
   background: #0d1113;
@@ -524,8 +719,14 @@ footer .section-inner {
 
   .blog-list,
   .newsletter-grid,
-  .category-grid {
+  .category-grid,
+  .blueprint-intro,
+  .two-columns {
     grid-template-columns: 1fr;
+  }
+
+  .step-progress {
+    min-width: 0;
   }
 }
 
@@ -549,5 +750,58 @@ footer .section-inner {
 
   .footer-form-row {
     grid-template-columns: 1fr;
+  }
+
+  .step-progress {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .report-actions,
+  .form-actions {
+    align-items: stretch;
+  }
+}
+
+@media print {
+  .nav,
+  .page-hero,
+  .blueprint-intro,
+  .form-actions,
+  .report-actions,
+  footer,
+  [data-blueprint-message],
+  [data-newsletter-status] {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  section,
+  .blueprint-shell {
+    padding: 0;
+  }
+
+  .blueprint-step,
+  .report-section,
+  .report-cta,
+  .diagnosis-block {
+    border-color: #bbb;
+    background: #fff;
+    break-inside: avoid;
+  }
+
+  .blueprint-step[hidden] {
+    display: block;
+  }
+
+  .report-cta {
+    color: #000;
+  }
+
+  .report-cta p {
+    color: #000;
   }
 }
