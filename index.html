@@ -17,6 +17,7 @@
   <meta name="twitter:description" content="Founder-led recruiting for one remote role. Get a focused, screened shortlist of international or bilingual talent through a flat $750 Talent Sprint.">
   <meta name="twitter:image" content="https://www.lateraloperations.com/assets/lateral-operations-hero.png">
   <link rel="icon" href="assets/lateral-operations-logo.png" type="image/png">
+  <link rel="alternate" type="application/rss+xml" title="Lateral Operations Blog" href="https://www.lateraloperations.com/rss.xml">
   <style>
     :root {
       --ink: #101316;
@@ -576,6 +577,7 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
   <header class="nav">
@@ -588,6 +590,8 @@
       <a href="#roles">Roles</a>
       <a href="#process">Process</a>
       <a href="#managed">Managed Talent</a>
+      <a href="blog/">Blog</a>
+      <a href="newsletter/">Newsletter</a>
       <a class="nav-cta" href="https://calendar.app.google/tW24dFbjDKWzCcVLA" target="_blank" rel="noopener">Start a Talent Sprint</a>
     </nav>
   </header>
@@ -769,6 +773,35 @@
       </div>
     </section>
 
+    <section class="newsletter-band" aria-labelledby="newsletter-heading">
+      <div class="section-inner newsletter-grid">
+        <div>
+          <div class="section-kicker">Newsletter</div>
+          <h2 id="newsletter-heading">Remote hiring insights without the corporate wallpaper.</h2>
+          <p class="lead">Practical notes on international hiring, remote operations, customer success, and building stronger teams.</p>
+        </div>
+        <form class="newsletter-form" data-newsletter-form novalidate>
+          <input type="text" name="website" tabindex="-1" autocomplete="off" class="form-hp" aria-hidden="true">
+          <input type="hidden" name="formStartedAt" data-form-started-at>
+          <div class="form-row">
+            <label for="home-first-name">First name <span>optional</span></label>
+            <input id="home-first-name" name="firstName" type="text" autocomplete="given-name">
+          </div>
+          <div class="form-row">
+            <label for="home-email">Email address</label>
+            <input id="home-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <label class="consent-row">
+            <input name="consent" type="checkbox" required>
+            <span>I agree to receive the Lateral Operations newsletter and understand I can unsubscribe at any time.</span>
+          </label>
+          <button class="button primary" type="submit">Join the newsletter</button>
+          <p class="form-message" data-form-message role="status" aria-live="polite"></p>
+          <p class="privacy-note">Newsletter subscribers are opt-in only. Cold outreach stays separate, as it should.</p>
+        </form>
+      </div>
+    </section>
+
     <section id="booking" class="cta">
       <div class="section-inner">
         <div class="section-kicker">Start here</div>
@@ -790,10 +823,29 @@
       </span>
       <div class="footer-links">
         <a href="mailto:alberto@lateraloperations.com?subject=Talent%20Sprint%20Inquiry">alberto@lateraloperations.com</a>
+        <a href="tel:+13323014550">+1 (332) 301-4550</a>
+        <a href="blog/">Blog</a>
+        <a href="newsletter/">Newsletter</a>
+        <a href="privacy/">Privacy</a>
         <a href="https://www.linkedin.com/company/lateral-operations/" target="_blank" rel="noopener">LinkedIn</a>
         <span>&copy; 2026 Lateral Operations</span>
       </div>
+      <form class="footer-newsletter" data-newsletter-form novalidate aria-label="Newsletter signup">
+        <input type="text" name="website" tabindex="-1" autocomplete="off" class="form-hp" aria-hidden="true">
+        <input type="hidden" name="formStartedAt" data-form-started-at>
+        <label for="footer-email">Newsletter</label>
+        <div class="footer-form-row">
+          <input id="footer-email" name="email" type="email" autocomplete="email" placeholder="Email address" required>
+          <button type="submit">Join</button>
+        </div>
+        <label class="footer-consent">
+          <input name="consent" type="checkbox" required>
+          <span>I consent to receive the newsletter.</span>
+        </label>
+        <p class="form-message" data-form-message role="status" aria-live="polite"></p>
+      </form>
     </div>
   </footer>
+  <script src="assets/newsletter.js" defer></script>
 </body>
 </html>
